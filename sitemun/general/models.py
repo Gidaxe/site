@@ -41,7 +41,10 @@ class Footer(models.Model):
 
 class Generation(models.Model):
     Nom_de_la_Génération = models.CharField(max_length=100, default='')
-    Citation = models.TextField(max_length=2000, default='toto')
+    Citation = models.TextField(max_length=2000, help_text='''Coucou, ici Axel codeur de la première génération ( les OGs !). J'espere vraiment que vous appréciez le site et que le Club prospère. Les conférences MUN sont vraiment des expériences géniales,
+     pourvus que vous jouiez le jeu et vous jetiez à l'eau. Pour ma part, je vous souhaite de vous épanouir pleinement
+      dans ce Club et d'y passer de belles années ! Bonne chance à tous ! Même si je sais que vous n'en aurez pas besoin, puisque
+       je suis intimement convaincu que tous les élèves du Club MUN (sans exceptions) sont BRILLANTS XD''')
     photo_de_groupe = models.ImageField(default='images/MUNTEAM.jpg', upload_to='images/')
 
     def __str__(self):
@@ -49,7 +52,7 @@ class Generation(models.Model):
 
     def set_default(self):
         self.Nom_de_la_Génération = 'Gen-0'
-        self.Citation = "Coucou, ici Axel codeur de la première génération ( les OGs !). J'espere vraiment que vous appréciez le site et que le Club prospère. Les conférences MUN sont vraiment des expériences géniales, pourvus que vous jouiez le jeu et vous jetiez à l'eau. Pour ma part, je vous souhaite de vous épanouir pleinement dans ce Club et d'y passer de belles années ! Bonne chance à tous ! Même si je sais que vous n'en aurez pas besoin, puisque je suis intimement convaincu que tous les élèves du Club MUN (sans exceptions) sont BRILLANTS XD"
+        self.Citation = " "
 
 # TODO: Make as many things as possible customizable (pictures, section titles, etc...), team-up with sasha.
 # TODO: specify tag-type in front of every field (h1/h2/p/etc..)
